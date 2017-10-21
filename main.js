@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({ width: 200, height: 200 })
+    mainWindow = new BrowserWindow({ width: 275, height: 350, title: "Time management app" })
 
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({

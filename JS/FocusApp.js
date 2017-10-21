@@ -13,7 +13,13 @@ function timer() {
         seconds = 0;
     }
 
-    timer.innerHTML = "<h1>Time: " + minutes + "." + seconds + "</h1>";
+    timer.innerHTML = "<h1>" + minutes + "." + seconds + "</h1>";
+
+    var clock = document.getElementById("clock");
+    var totaltime = 25 * 60;
+    var onerotation = 360 / totaltime;
+
+    clock.style.transform = "rotate(" + ((60 * minutes) + seconds) * onerotation + "deg)";
 
     if (minutes == 25) {
         timer.innerHTML = "25 minutes have passed";
@@ -31,7 +37,7 @@ function initiateTimer(pos) {
     console.log(pos);
     if (pos == "start") {
         console.log("Resume called");
-        var mytimer = setInterval(timer, 10);
+        var mytimer = setInterval(timer, 100);
         mytimer;
         intervals.push(mytimer);
     } else if (pos == "end") {
@@ -79,3 +85,9 @@ function pause() {
 // Starts the timer when app is loaded
 
 initiateTimer("start");
+
+// Restarts the clock, by reloading the window
+
+function end() {
+    window.location.reload();
+}
