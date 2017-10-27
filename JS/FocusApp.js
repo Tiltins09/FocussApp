@@ -76,7 +76,7 @@ function pause() {
         intervals.forEach(clearInterval);
         initiateTimer("end");
         button.innerText = "Resume";
-    } else if (button.innerText == "Resume") {
+    } else if (button.innerText == "Resume" || button.innerText == "Start") {
         initiateTimer("start");
         button.innerText = "Pause";
     }
@@ -84,7 +84,7 @@ function pause() {
 
 // Starts the timer when app is loaded
 
-initiateTimer("start");
+// initiateTimer("start");
 
 // Restarts the clock, by reloading the window
 
