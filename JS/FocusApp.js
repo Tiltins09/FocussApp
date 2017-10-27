@@ -37,7 +37,7 @@ function initiateTimer(pos) {
     console.log(pos);
     if (pos == "start") {
         console.log("Resume called");
-        var mytimer = setInterval(timer, 100);
+        var mytimer = setInterval(timer, 1000);
         mytimer;
         intervals.push(mytimer);
     } else if (pos == "end") {
