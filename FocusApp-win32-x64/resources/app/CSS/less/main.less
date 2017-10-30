@@ -1,0 +1,51 @@
+
+@tirkizs: #558C89;
+@zils: #74AFAD;
+@oranzs: #D9853B;
+@peleks: #ECECEA;
+@font: 'Open Sans', sans-serif;
+
+
+body {
+    background-color: @tirkizs;
+    font-family: @font; 
+
+    .handlers {
+        width: 75px;
+        border: none;
+        border-radius: 3px;
+        color: @oranzs;
+        background-color: @peleks;
+        margin-left: 63px;
+    }
+    
+    
+    #frame {
+        width: 200px;
+        height: 200px;
+        margin-top: 25px;
+        margin-left: 65px;
+        border-radius: 100px;
+        background-color: @peleks;
+        h4#timer {
+            width: 200px;
+            text-align: center;
+            color: @zils;
+            position: absolute;
+        }
+        #clock {
+            width: 2px;
+            height: 200px;
+            margin-left: 100px;
+            position: absolute;
+            .handle {
+                display: block;
+                width: 100%;
+                height: 50%;
+            }
+            .handle:first-child {
+                background-color: @oranzs;
+            }
+        }
+    }
+}
